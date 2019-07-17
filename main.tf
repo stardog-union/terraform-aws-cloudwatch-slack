@@ -17,7 +17,7 @@ module "lambda" {
   attach_policy = true
   policy        = "${data.aws_iam_policy_document.lambda.json}"
 
-  environment {
+  environment = {
     variables = {
       SLACK_URL = "${var.slack_url}"
 
